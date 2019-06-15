@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+Enter Roll Number : <input type="text" name="rollno" [(ngModel)]="student.rollno"><br><br>  
+Enter First Name : <input type="text" name="fname" [(ngModel)]="student.fname"><br><br>  
+Enter Last Name : <input type="text" name="lname" [(ngModel)]="student.lname"><br><br>  
+Enter Mark : <input type="text" name="mark" [(ngModel)]="student.mark"><br><br>  
+Enter City : <input type="text" name="city" [(ngModel)]="student.city"><br><br>  
+<button type="button" (click)="insertStudent()">Add Detail</button>
+<button type="button" (click)="updateStudent()">Update Detail</button>
+<button type="button" (click)="deleteStudent()">Delete Detail</button>
+<p [textContent]="msg" [style]="mystyle"></p>
+</div>
+
+
+<table width="30%" align="center" border="1" cellspacing="0">
+  <tr>
+    <th>Roll Number</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Mark</th>
+    <th>City</th>
+  </tr>  
+
+  <tr *ngFor="let student of students">
+    <td [textContent]="student.rollno"></td>
+    <td [textContent]="student.fname"></td>
+    <td [textContent]="student.lname"></td>
+    <td [textContent]="student.mark"></td>
+    <td [textContent]="student.city"></td>
+  </tr>
+</table>
+
